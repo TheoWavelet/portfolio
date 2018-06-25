@@ -16,9 +16,9 @@ background-repeat: repeat;
 
 .anim {
     height:$height;
-    background-image: url('../../img/sativa.png') ;
-    background-color:  lighten($green, 70%);
-    background-blend-mode:color;
+    background-image: url('../../img/sativa1.png') ;
+    background-color:  lighten($green, 4%);
+    background-blend-mode:screen;
     background-repeat: repeat;
     
 }

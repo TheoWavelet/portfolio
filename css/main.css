@@ -414,9 +414,9 @@ i {
 
 .anim {
   height: 20em;
-  background-image: url("../../img/sativa.png");
-  background-color: #eefaf9;
-  background-blend-mode: color;
+  background-image: url("../../img/sativa1.png");
+  background-color: #20776b;
+  background-blend-mode: screen;
   background-repeat: repeat; }
 
 ul {
