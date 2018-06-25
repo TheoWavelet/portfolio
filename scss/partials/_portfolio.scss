@@ -1,0 +1,28 @@
+$height:20em;
+
+
+
+
+
+.web{
+    height:$height;
+    background-image: url('../../img/doodles.png') ;
+background-color:  $red;
+background-blend-mode:screen;
+background-repeat: repeat;
+
+}
+
+
+.anim {
+    height:$height;
+    background-image: url('../../img/sativa.png') ;
+    background-color:  lighten($green, 70%);
+    background-blend-mode:color;
+    background-repeat: repeat;
+    
+}
+
+ul{
+    list-style-type: none;
+}

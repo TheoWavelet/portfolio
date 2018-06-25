@@ -1,0 +1,24 @@
+
+@mixin container($width: 90%, $max-width: 50em) {
+    width: $width;
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+  @mixin studio($color, $fs, $ls: .15em,   $lh: 1) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+   
+    line-height: $lh;
+    font-family: "BPG LE Studio 02";
+    
+  }
+  @mixin glaho($color,  $fs, $ls: .15em,  $lh: 1) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+   
+    line-height: $lh;
+    font-family:"MG Glaho Drunk";
+    
+  }

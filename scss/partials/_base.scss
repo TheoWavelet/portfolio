@@ -1,0 +1,35 @@
+html {
+    // overflow: hidden;
+}
+
+
+
+#front{
+    transform-origin: top right;
+    
+    transition:transform 0.7s ease-in-out;
+
+    
+    height:auto;
+     z-index: 5; 
+     position:absolute; 
+     top:0;
+     width:100%;
+     background-color: white;
+}
+
+#back{
+    height: 100%;
+     z-index: 1; 
+     position:absolute; top:0;
+     width:100%; 
+     background-color: white;
+}
+
+
+.rotated {
+transform-origin: top right;
+transform:rotate(35deg);
+transition:transform 0.7s ease-in-out;
+
+}
