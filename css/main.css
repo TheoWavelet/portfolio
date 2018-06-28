@@ -337,6 +337,14 @@ template {
 [hidden] {
   display: none; }
 
+html {
+  overflow-x: hidden;
+  width: 100%; }
+
+h1, h2 {
+  font-family: 'Roboto';
+  font-weight: 300; }
+
 #front {
   transform-origin: top right;
   transition: transform 0.7s ease-in-out;
@@ -362,13 +370,14 @@ template {
 
 #home {
   display: flex;
-  height: 15em; }
+  min-height: 15em;
+  height: auto;
+  flex-wrap: wrap; }
 
 #home button {
   position: absolute;
   right: 20px;
   top: 10px;
-  height: 2em;
   width: 4em;
   height: 4em;
   background: transparent;
@@ -388,39 +397,445 @@ i {
 .close {
   position: relative;
   transform: translate(100px, 30px);
-  transition: transform 0.7s ease-in-out; }
+  transition: transform 0.7s ease-in-out;
+  width: 3em;
+  height: 3em; }
 
 .closeit {
   position: relative;
-  transform: rotate(-35deg) translate(30px, 80px);
+  transform: rotate(-35deg) translate(35px, 80px);
   transition: transform 0.7s ease-in-out; }
 
 #home > h1 {
-  position: absolute;
+  position: relative;
   top: 60px;
   left: 30px;
   font-size: 4em;
   letter-spacing: 0.15em;
   color: rgba(21, 77, 70, 0.8);
   line-height: 1;
-  font-family: "MG Glaho Drunk"; }
+  font-family: "MG Glaho Drunk";
+  padding-bottom: 1em; }
 
-.web {
+#home > h2 {
+  position: relative;
+  padding-left: .5em;
+  font-size: 2em;
+  letter-spacing: 0.15em;
+  color: rgba(21, 77, 70, 0.6);
+  line-height: 1;
+  font-family: "MG Glaho Drunk"; }
+  @media (min-width: 700px) {
+    #home > h2 {
+      position: absolute;
+      top: 130px;
+      left: 30px; } }
+
+.bgweb {
   height: 20em;
   background-image: url("../../img/doodles.png");
   background-color: #da615d;
   background-blend-mode: screen;
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  position: absolute;
+  display: block;
+  width: 100%; }
 
-.anim {
+.bganim {
   height: 20em;
   background-image: url("../../img/sativa1.png");
   background-color: #20776b;
   background-blend-mode: screen;
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  position: absolute;
+  display: block;
+  width: 100%;
+  transform: translateY(300px); }
+
+.fa-caret-right:hover, .fa-caret-left:hover {
+  opacity: .5; }
+
+.web {
+  height: 20em;
+  width: auto;
+  overflow: hidden;
+  margin: 0 5em;
+  align-self: center;
+  display: flex; }
+  .web .fa-caret-left {
+    position: absolute;
+    width: auto;
+    height: auto;
+    color: #1d695f;
+    transform: translate(-50px, 90px);
+    font-size: 7em; }
+  .web .fa-caret-right {
+    position: absolute;
+    width: auto;
+    height: auto;
+    color: #1d695f;
+    right: 0;
+    transform: translate(-50px, 90px);
+    font-size: 7em; }
+
+.anim {
+  height: 20em;
+  overflow: hidden;
+  margin: 0 5em;
+  align-self: center;
+  display: flex; }
+  .anim h2 {
+    position: absolute;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    color: rgba(218, 97, 93, 0.8);
+    line-height: 1;
+    font-family: "BPG LE Studio 02"; }
+  .anim .fa-caret-left {
+    position: absolute;
+    width: auto;
+    height: auto;
+    color: #1d695f;
+    transform: translate(-50px, 90px);
+    font-size: 7em; }
+  .anim .fa-caret-right {
+    position: absolute;
+    width: auto;
+    height: auto;
+    color: #1d695f;
+    right: 0;
+    transform: translate(-50px, 90px);
+    font-size: 7em; }
 
 ul {
   list-style-type: none; }
+
+.web-items {
+  background-color: transparent;
+  display: flex;
+  min-height: 300px;
+  height: 90%;
+  border-bottom: rgba(21, 77, 70, 0.6) solid 1px;
+  position: relative;
+  transform: translateX(0px);
+  transition: all .5s ease;
+  margin-left: 40; }
+  .web-items h2 {
+    position: absolute; }
+  .web-items .item-1 {
+    display: flex;
+    overflow: hidden;
+    background: url(../../img/capture.png), linear-gradient(to right, rgba(21, 77, 70, 0.4), rgba(218, 97, 93, 0.4));
+    background-blend-mode: multiply;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-1 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-1:hover div {
+      opacity: 100;
+      top: 0; }
+  .web-items .item-2 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-2 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-2:hover div {
+      opacity: 100;
+      top: 0; }
+  .web-items .item-3 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-3 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-3:hover div {
+      opacity: 100;
+      top: 0; }
+  .web-items .item-4 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-4 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-4:hover div {
+      opacity: 100;
+      top: 0; }
+  .web-items .item-5 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-5 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-5:hover div {
+      opacity: 100;
+      top: 0; }
+  .web-items .item-6 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .web-items .item-6 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .web-items .item-6:hover div {
+      opacity: 100;
+      top: 0; }
+
+.anim-items {
+  background-color: transparent;
+  display: flex;
+  min-height: 300px;
+  height: 90%;
+  border-bottom: rgba(21, 77, 70, 0.6) solid 1px;
+  position: relative;
+  transform: translateX(0px);
+  transition: all .5s ease; }
+  .anim-items h2 {
+    position: absolute;
+    font-family: 'roboto';
+    color: white; }
+  .anim-items .item-1 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-1 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-1:hover div {
+      opacity: 100;
+      top: 0; }
+  .anim-items .item-2 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-2 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-2:hover div {
+      opacity: 100;
+      top: 0; }
+  .anim-items .item-3 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-3 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-3:hover div {
+      opacity: 100;
+      top: 0; }
+  .anim-items .item-4 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-4 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-4:hover div {
+      opacity: 100;
+      top: 0; }
+  .anim-items .item-5 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-5 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-5:hover div {
+      opacity: 100;
+      top: 0; }
+  .anim-items .item-6 {
+    display: flex;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.2);
+    background-blend-mode: normal;
+    background-size: cover;
+    overflow: hidden;
+    margin: 30px 20px;
+    width: 350px;
+    height: 220px; }
+    .anim-items .item-6 div {
+      position: relative;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; }
+    .anim-items .item-6:hover div {
+      opacity: 100;
+      top: 0; }
 
 h1, h2 {
   margin: 0px;
@@ -438,4 +853,5 @@ h1, h2 {
   bottom: 0;
   right: 0;
   width: 50%;
-  height: 100%; }
+  height: 100%;
+  min-width: 50em; }

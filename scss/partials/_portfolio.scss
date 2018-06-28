@@ -1,28 +1,201 @@
 $height:20em;
 
+.bgweb{height:$height;
+    background-image: url('../../img/doodles.png') ;
+    background-color:  $red;
+    background-blend-mode:screen;
+    background-repeat: repeat;
+position: absolute;
+display:block;
+width:100%;
+}
+.bganim{height:$height;
+    background-image: url('../../img/sativa1.png') ;
+    background-color:  lighten($green, 4%);
+    background-blend-mode:screen;
+    background-repeat: repeat;
+position:absolute;
+display:block;
+width:100%;
+transform: translateY(300px);
+}
 
-
-
-
+.fa-caret-right,.fa-caret-left{
+    &:hover{
+        opacity: .5;
+    }
+}
 .web{
     height:$height;
-    background-image: url('../../img/doodles.png') ;
-background-color:  $red;
-background-blend-mode:screen;
-background-repeat: repeat;
+    width:auto;
+overflow: hidden;
+margin:0 5em;
+align-self: center;
+display:flex;
 
+
+
+.fa-caret-left{
+    position:absolute;
+    width:auto;
+    height:auto;
+    color:lighten($green,.6);
+       transform: translate(-50px,90px);
+       font-size:7em;
+
+}
+.fa-caret-right{
+    position:absolute;
+    width:auto;
+    height:auto;
+    color:lighten($green,.6);
+    right:0;
+    transform: translate(-50px,90px);
+    font-size:7em;
+}
 }
 
 
 .anim {
     height:$height;
-    background-image: url('../../img/sativa1.png') ;
-    background-color:  lighten($green, 4%);
-    background-blend-mode:screen;
-    background-repeat: repeat;
+   
     
+    overflow: hidden;
+    margin:0 5em;
+    align-self: center;
+    display:flex;
+    h2{position: absolute;
+    @include studio(rgba($red,.8),1.5em);
+}
+    
+    
+    .fa-caret-left{
+        position:absolute;
+        width:auto;
+        height:auto;
+        color:lighten($green,.6);
+           transform: translate(-50px,90px);
+           font-size:7em;
+    
+    }
+    .fa-caret-right{
+        position:absolute;
+        width:auto;
+        height:auto;
+        color:lighten($green,.6);
+        right:0;
+        transform: translate(-50px,90px);
+        font-size:7em;
+    }
 }
 
 ul{
     list-style-type: none;
+}
+
+
+
+
+
+.web-items{
+//     background-color: transparent;
+
+//  display:flex;
+
+// min-height: 300px;
+//  height:90%;
+//  border-bottom: rgba($dark-green, 0.6) solid 1px;
+// position: relative;
+ 
+//  transform: translateX(0px);
+ 
+//  transition: all .5s ease;
+@include container();
+h2{
+    position:absolute;
+    
+}
+ margin-left:40;
+
+
+
+
+.item-1{
+    @include pitem((url(../../img/capture.png),linear-gradient(to right, rgba($dark-green,.4),rgba($red,.4))),flex,multiply);
+}
+
+
+.item-2{@include pitem (rgba(grey,.2),none);
+
+}
+
+.item-3{
+    @include pitem (rgba(grey,.2),none);
+
+}
+
+
+.item-4{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+.item-5{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+.item-6{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+}
+
+
+
+
+.anim-items{
+    @include container();
+h2{position:absolute;
+    font-family:'roboto';
+    color:white;
+    
+}
+
+
+.item-1{@include pitem (rgba(grey,.2),none);
+
+}
+
+.item-2{@include pitem (rgba(grey,.2),none);
+
+}
+
+.item-3{
+    @include pitem (rgba(grey,.2),none);
+
+}
+
+
+.item-4{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+.item-5{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+.item-6{
+@include pitem (rgba(grey,.2),none)
+}
+
+
+
+
+
+
+
 }

@@ -1,6 +1,7 @@
 const gulp=require('gulp');
 
 const sass=require('gulp-sass');
+const wait = require('gulp-wait');
 
 
 
@@ -8,6 +9,7 @@ const sass=require('gulp-sass');
 // Compile Sass into CSS & inject into browsers
 gulp.task('sass', function() {
 return gulp.src('./scss/**/*.scss')
+.pipe(wait(200))
 .pipe(sass())
 .pipe(gulp.dest('./css'));
 });

@@ -1,6 +1,10 @@
 
-#home{display:flex;
-    height:15em;}
+#home{
+    display:flex;
+    min-height:15em;
+    height:auto;
+    flex-wrap: wrap;
+}
 
 
 
@@ -9,7 +13,7 @@
     position: absolute;
     right:20px;
     top:10px;
-    height:2em;
+    
     width:4em;
     height: 4em;
     background:transparent;
@@ -31,18 +35,32 @@
       position: relative;
       transform: translate(100px,30px);
       transition:transform 0.7s ease-in-out;
-      
+      width:3em;
+    height: 3em;
   }
   .closeit { 
     position: relative;
-transform:rotate(-35deg) translate(30px,80px); 
+transform:rotate(-35deg) translate(35px,80px); 
     transition:transform 0.7s ease-in-out;
   }
 
   #home>h1{
-      position:absolute;
+      position:relative;
       top: 60px;
       left:30px;
       @include glaho( rgba($dark-green, 0.8), 4em);
+    padding-bottom: 1em;
   }
+  #home>h2{
+    position:relative;
+    padding-left: .5em;
+    
+    @include glaho( rgba($dark-green, 0.6), 2em);
+    @media (min-width:700px){
+        position:absolute;
+top: 130px;
+    left:30px;
+    }
+  
+}
     

@@ -1,8 +1,18 @@
 
-@mixin container($width: 90%, $max-width: 50em) {
-    width: $width;
-    margin: 0 auto;
-    max-width: $max-width;
+@mixin container() {
+  background-color: transparent;
+
+  display:flex;
+ 
+ min-height: 300px;
+  height:90%;
+  border-bottom: rgba($dark-green, 0.6) solid 1px;
+ position: relative;
+  
+  transform: translateX(0px);
+  
+  transition: all .5s ease;
+ 
   }
   @mixin studio($color, $fs, $ls: .15em,   $lh: 1) {
     font-size: $fs;
@@ -22,3 +32,41 @@
     font-family:"MG Glaho Drunk";
     
   }
+
+  @mixin pitem ($bg:none,$display:flex,$blend:normal ){
+    div {
+      position: relative;
+      top:100%;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color: white;
+      transition: all .3s ease-in-out;
+      display: $display;
+      flex-direction: column;
+      width:100%; 
+      opacity: 0;
+  }
+
+  
+  
+  
+  display: flex;
+  overflow: hidden;
+  background: $bg;
+  
+ 
+  background-blend-mode: $blend;
+  background-size: cover;
+  
+  overflow: hidden;
+  margin: 30px 20px;
+  width:350px;
+  height:220px;
+  
+  &:hover div{
+      opacity: 100;
+      top:0};
+  
+}
+    
