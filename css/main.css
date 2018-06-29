@@ -443,7 +443,7 @@ i:hover {
 
 .bgweb {
   height: 20em;
-  background-image: url("../../img/doodles.png");
+  background-image: url("../img/doodles.png");
   background-color: #cc3a35;
   background-blend-mode: screen;
   background-repeat: repeat;
@@ -453,7 +453,7 @@ i:hover {
 
 .bganim {
   height: 20em;
-  background-image: url("../../img/sativa1.png");
+  background-image: url("../img/sativa1.png");
   background-color: #20776b;
   background-blend-mode: screen;
   background-repeat: repeat;
@@ -542,7 +542,7 @@ ul {
   .web-items .item-1 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/capture.png), linear-gradient(to right, rgba(21, 77, 70, 0.9), rgba(204, 58, 53, 0.2));
+    background: url(../img/capture.png), linear-gradient(to right, rgba(21, 77, 70, 0.9), rgba(204, 58, 53, 0.2));
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -803,7 +803,7 @@ ul {
   .anim-items .item-1 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/sea.png);
+    background: url(../img/sea.png);
     background-blend-mode: normal;
     background-size: cover;
     background-position: center;
@@ -844,7 +844,7 @@ ul {
   .anim-items .item-2 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/ball.png);
+    background: url(../img/ball.png);
     background-blend-mode: normal;
     background-size: cover;
     background-position: center;
@@ -885,7 +885,7 @@ ul {
   .anim-items .item-3 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/car.png);
+    background: url(../img/car.png);
     background-blend-mode: normal;
     background-size: cover;
     background-position: center;
@@ -926,7 +926,7 @@ ul {
   .anim-items .item-4 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/borjomi.png);
+    background: url(../img/borjomi.png);
     background-blend-mode: normal;
     background-size: cover;
     background-position: center;
@@ -967,7 +967,7 @@ ul {
   .anim-items .item-5 {
     display: flex;
     overflow: hidden;
-    background: url(../../img/hud.png);
+    background: url(../img/hud.png);
     background-blend-mode: normal;
     background-size: cover;
     background-position: center;
