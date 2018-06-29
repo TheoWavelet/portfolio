@@ -1,9 +1,42 @@
 .social-icons{
-    background:$dark-green;
+    background:$green;
     position:absolute;
     bottom:0;
     right:0;
-    width:50%;
+    width:45%;
     height:100%;
-    min-width: 50em;
+    min-width: 45em;
+    display:flex;
+    div{position: absolute;
+        
+        width:auto;
+        bottom:0;
+        right:0;
+
+
+    }
+    i{
+        width:auto;
+position: relative;
+font-size:5em;
+color:darken($dark-green,.3);
+text-shadow: 2px 2px 1px rgba(white,.2)  ;
+       &:hover{
+           color:rgba($red,.6);
+       }
+
+    }
+}
+
+.fa-facebook-square{
+    transform: translate(170px, -340px)
+}
+.fa-github-square{
+    transform: translate(60px, -240px)
+}
+.fa-youtube-square{
+    transform: translate(-60px, -140px)
+}
+.fa-twitter-square{
+    transform: translate(-180px, -40px)
 }

@@ -50,7 +50,7 @@ display:flex;
     height:auto;
     color:lighten($green,.6);
     right:0;
-    transform: translate(-50px,90px);
+    transform: translate(-20px,90px);
     font-size:7em;
 }
 }
@@ -84,7 +84,7 @@ display:flex;
         height:auto;
         color:lighten($green,.6);
         right:0;
-        transform: translate(-50px,90px);
+        transform: translate(-20px,90px);
         font-size:7em;
     }
 }
@@ -114,14 +114,18 @@ ul{
 h2{
     position:absolute;
     
+    @include studio(white,2em);
+    font-weight:600;
+    margin:5px;
 }
- margin-left:40;
+ margin-left:20px;
 
 
 
 
 .item-1{
-    @include pitem((url(../../img/capture.png),linear-gradient(to right, rgba($dark-green,.4),rgba($red,.4))),flex,multiply);
+    @include pitem((url(../../img/capture.png),linear-gradient(to right, rgba($dark-green,.9),rgba($red,.2))),flex,multiply);
+    
 }
 
 
@@ -162,29 +166,29 @@ h2{position:absolute;
     color:white;
     
 }
+margin-left:20px;
 
-
-.item-1{@include pitem (rgba(grey,.2),none);
+.item-1{@include pitem (url(../../img/sea.png),flex);
 
 }
 
-.item-2{@include pitem (rgba(grey,.2),none);
+.item-2{@include pitem (url(../../img/ball.png),flex);
 
 }
 
 .item-3{
-    @include pitem (rgba(grey,.2),none);
+    @include pitem (url(../../img/car.png),flex);
 
 }
 
 
 .item-4{
-@include pitem (rgba(grey,.2),none)
+@include pitem (url(../../img/borjomi.png),flex)
 }
 
 
 .item-5{
-@include pitem (rgba(grey,.2),none)
+@include pitem (url(../../img/hud.png),flex)
 }
 
 

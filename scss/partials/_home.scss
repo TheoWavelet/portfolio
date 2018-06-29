@@ -19,29 +19,41 @@
     background:transparent;
     border:0;
         &:focus {outline:0;}
+        i{ 
+            color:$red;
+            opacity: .8;  
+            font-size: 4em;
+              width:100%;
+              
+              &:hover{
+                cursor:pointer;
+            } 
+          }
+          &:hover{
+            cursor:pointer;
+        } 
   }
   .opacity{
       opacity:0.5;
   }
-  i{ 
-    color:red;
-    opacity: .8;  
-    font-size: 4em;
-      width:100%;
-      
-
-  }
+  
   .close{
       position: relative;
       transform: translate(100px,30px);
       transition:transform 0.7s ease-in-out;
       width:3em;
     height: 3em;
+    &:hover{
+        cursor:pointer;
+    } 
   }
   .closeit { 
     position: relative;
 transform:rotate(-35deg) translate(35px,80px); 
     transition:transform 0.7s ease-in-out;
+    &:hover{
+        cursor:pointer;
+    } 
   }
 
   #home>h1{
@@ -61,6 +73,6 @@ transform:rotate(-35deg) translate(35px,80px);
 top: 130px;
     left:30px;
     }
-  
+ 
 }
     

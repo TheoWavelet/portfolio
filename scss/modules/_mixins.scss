@@ -14,7 +14,7 @@
   transition: all .5s ease;
  
   }
-  @mixin studio($color, $fs, $ls: .15em,   $lh: 1) {
+  @mixin studio($color, $fs, $ls: .10em,   $lh: 1) {
     font-size: $fs;
     letter-spacing: $ls;
     color: $color;
@@ -23,7 +23,7 @@
     font-family: "BPG LE Studio 02";
     
   }
-  @mixin glaho($color,  $fs, $ls: .15em,  $lh: 1) {
+  @mixin glaho($color,  $fs, $ls: .10em,  $lh: 1) {
     font-size: $fs;
     letter-spacing: $ls;
     color: $color;
@@ -40,12 +40,32 @@
       bottom:0;
       left:0;
       right:0;
-      background-color: white;
+      background-color: rgba($green,.8);
       transition: all .3s ease-in-out;
       display: $display;
       flex-direction: column;
       width:100%; 
       opacity: 0;
+      text-align: start;
+      
+      h2{
+        position:relative;
+        font-size:1.6em;
+        color:white;
+        margin-left:15px;
+        // line-height: 1em;
+        font-weight: 300;
+        font-family: 'roboto';
+        margin:2px 15px;
+      }
+      a{
+        
+        text-decoration: none;
+        font-size:1.5em;
+
+        h2{color:$red !important; 
+        font-weight: 500 !important; }
+      }
   }
 
   
@@ -58,7 +78,7 @@
  
   background-blend-mode: $blend;
   background-size: cover;
-  
+  background-position: center;
   overflow: hidden;
   margin: 30px 20px;
   width:350px;
